@@ -1,0 +1,14 @@
+PASOS GIT
+git config --global user.name "nombre_usuario"
+git config --global user.email "nombre@dominio.com"
+git init (inicalizar)
+git status (ver estado)
+git add <nombre_archivo>, --all, -A, . (pasar al staging area) 
+git commit (abre editor VI) presionar i, Escribir descripción, :wq
+<Forma abreviada> git commit -m "Descripción"
+
+git log (resumen) --oneline
+
+<Para subir a github>
+git remote add origin https://github.com/<nombre_usuario>/<repositorio> (crear el alias "origin")
+git push -u origin master
