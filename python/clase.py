@@ -14,4 +14,4 @@ try:
 except ValueError:
     print("Edad inválida (debe ser un número entero).")
 
-edad_input # type: ignore
+# Este código solicita al usuario que introduzca su edad y clasifica la edad en diferentes categorías.
