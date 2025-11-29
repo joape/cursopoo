@@ -30,8 +30,10 @@ class Automovil:
     def frenar(self, decremento: float) -> None:
            
             if decremento > 0:
-                self.__velocidad_actual -= decremento
-                if self.__velocidad_actual < 0:
+                velocidad= self.get_velocidad_actual()
+                velocidad -= decremento
+                self.__velocidad_actual = velocidad
+                if velocidad < 0:
                     self.__velocidad_actual = 0
                 print(f"Frenando: -{decremento} km/h")
             else:
@@ -40,9 +42,9 @@ class Automovil:
     def mostrarEstado(self) -> None:
       
             print(f"Marca: {self.get_marca()}")
-            print(f"Modelo: {self.__modelo}")
-            print(f"Año: {self.__año}")
-            print(f"Velocidad actual: {self.__velocidad_actual:.1f} km/h")
+            print(f"Modelo: {self.get_modelo()}")
+            print(f"Año: {self.get_año()}")
+            print(f"Velocidad actual: {self.get_velocidad_actual():.1f} km/h")
     
     def get_marca(self) -> str:
         return self.__marca

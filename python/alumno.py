@@ -18,17 +18,28 @@ class Alumno:
         self.__nota_final = nota_final
     
     def aprobo(self) -> bool:
-       
-        return self.__nota_final >= 6.0
+        nota= self.get_nota_final()
+        return nota >= 6.0
     
     def mostrarDatos(self) -> None:
         
-        print(f"Nombre: {self.__nombre}")
-        print(f"Apellido: {self.__apellido}")
-        print(f"Legajo: {self.__legajo}")
-        print(f"Nota Final: {self.__nota_final:.1f}")
+        print(f"Nombre: {self.get_nombre()}")
+        print(f"Apellido: {self.get_apellido()}")
+        print(f"Legajo: {self.get_legajo()}")
+        print(f"Nota Final: {self.get_nota_final():.1f}")
         print(f"Estado: {'Aprobado' if self.aprobo() else 'Desaprobado'}")
 
+    def get_nombre(self) -> str:
+            return self.__nombre    
+
+    def get_apellido(self) -> str:
+            return self.__apellido
+
+    def get_legajo(self) -> str:
+            return self.__legajo
+
+    def get_nota_final(self) -> float:
+            return self.__nota_final    
 
 if __name__ == "__main__":
     # Ejemplos de uso

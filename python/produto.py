@@ -18,8 +18,9 @@ class Producto:
         self.__precio = precio
     
     def calcularDescuento(self, porcentaje: float) -> float:
+        precio= self.get_precio()
         descuento = self.get_precio() * (porcentaje / 100)
-        return self.__precio - descuento
+        return precio - descuento
     
     def mostrarInformacion(self) -> None:
         print(f"Código: {self.get_codigo()}")
